@@ -11,10 +11,3 @@ public class TodoTest {
         assertNull(new TaskList().getTask());
     }
 }
-
-class TaskList{
-
-    public Object getTask() {
-        return null;
-    }
-}
