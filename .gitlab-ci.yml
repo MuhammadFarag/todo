@@ -27,3 +27,5 @@ test:
   stage: test
   script:
   - ./gradlew check
+  - ./gradlew jacocoTestReport
+  - bash <(curl -s https://codecov.io/bash)
