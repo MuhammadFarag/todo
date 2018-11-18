@@ -10,19 +10,20 @@ public class TaskListTest {
     @Test
     public void TestReturnNoTasksIfNoneExists() {
 
-        assertNull(new TaskList().getTask());
+        assertNull(new TaskList().getTask(0));
     }
 
     @Test
     public void TestReturnTaskIfTaskExists() {
         TaskList taskList = new TaskList() ;
-        assertNotNull(taskList);
+        taskList.addTask("New Task");
+        assertNotNull(taskList.getTask(0));
+
 
     }
 
-    public Object getTask() {
-        return null;
-    }
+
+
 
 
 
