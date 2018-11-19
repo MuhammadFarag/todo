@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
-./gradlew sonarqube \
-  -Dsonar.projectKey=$SONAR_QUBE_PROJECT_KEY \
-  -Dsonar.organization=muhammadfarag-github \
-  -Dsonar.host.url=https://sonarcloud.io \
-  -Dsonar.login=$SONAR_QUBE_TOKEN \
-  -Dsonar.pullrequest.base=master \
-  -Dsonar.pullrequest.branch=$CI_COMMIT_REF_NAME \
-  -Dsonar.pullrequest.key=29 \
-  -Dsonar.pullrequest.provider=GitHub \
-  -Dsonar.pullrequest.github.repository=muhammadfarag/todo
+#./gradlew sonarqube \
+#  -Dsonar.projectKey=$SONAR_QUBE_PROJECT_KEY \
+#  -Dsonar.organization=muhammadfarag-github \
+#  -Dsonar.host.url=https://sonarcloud.io \
+#  -Dsonar.login=$SONAR_QUBE_TOKEN \
+#  -Dsonar.pullrequest.base=master \
+#  -Dsonar.pullrequest.branch=$CI_COMMIT_REF_NAME \
+#  -Dsonar.pullrequest.key=29 \
+#  -Dsonar.pullrequest.provider=GitHub \
+#  -Dsonar.pullrequest.github.repository=muhammadfarag/todo
 
 ./gradlew build check sonarqube --scan\
   -Dsonar.host.url=https://sonarcloud.io \
@@ -18,5 +18,5 @@
   -Dsonar.analysis.sha1=$TRAVIS_PULL_REQUEST_SHA  \
   -Dsonar.analysis.repository=$TRAVIS_REPO_SLUG \
   -Dsonar.analysis.prNumber=$TRAVIS_PULL_REQUEST \
-  -Dsonar.branch.name=$TRAVIS_PULL_REQUEST_BRANCH \
-  -Dsonar.branch.target=$TRAVIS_BRANCH
+  -Dsonar.branch.name=$TRAVIS_PULL_REQUEST_BRANCH
+#  -Dsonar.branch.target=$TRAVIS_BRANCH
