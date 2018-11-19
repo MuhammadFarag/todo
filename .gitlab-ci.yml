@@ -32,7 +32,6 @@ test:
   - ./gradlew check
   - ./gradlew jacocoTestReport
   - bash <(curl -s https://codecov.io/bash)
-  - ./sonarqube.sh
 
 code_quality:
   image: docker:stable
