@@ -18,7 +18,13 @@ public class TaskListTest {
         TaskList taskList = new TaskList() ;
         taskList.addTask("New Task");
         assertNotNull(taskList.getTask(0));
+    }
 
+    @Test
+    public void TestReturnFirstTask() {
+        TaskList taskList = new TaskList() ;
+        taskList.addTask("New Task");
+        assertNotNull(taskList.getFirstTask() );
 
     }
 
