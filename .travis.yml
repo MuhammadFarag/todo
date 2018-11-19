@@ -21,8 +21,8 @@ cache:
 
 jobs:
   include:
-  #  - stage: build
-  #    script: ./gradlew assemble
+  - stage: build
+    script: ./gradlew assemble
   - stage: test
     script: ./gradlew check
   - stage: sonar
