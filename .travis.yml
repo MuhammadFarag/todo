@@ -24,7 +24,10 @@ jobs:
   - stage: build
     script: ./gradlew assemble
   - stage: test
-    script: ./gradlew check
+    script:
+    - ./gradlew check
+    - ./gradlew jacocoTestReport
+    - bash <(curl -s https://codecov.io/bash)
   - stage: sonar
     script:
     - pwd
