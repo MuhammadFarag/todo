@@ -23,7 +23,7 @@ jobs:
   include:
   #  - stage: build
   #    script: ./gradlew assemble
-  #  - stage: test
-  #    script: ./gradlew check
+  - stage: test
+    script: ./gradlew check
   - stage: sonar
-    script: sonar-scanner
+    script: ./sonarqube.sh
