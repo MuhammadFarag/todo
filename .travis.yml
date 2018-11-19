@@ -26,4 +26,4 @@ jobs:
   - stage: test
     script: ./gradlew check
   - stage: sonar
-    script: sonar-scanner
+    script: sonar-scanner -X
