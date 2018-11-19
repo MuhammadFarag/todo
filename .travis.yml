@@ -18,7 +18,6 @@ cache:
   - $HOME/.m2/repository
   - $HOME/.sonar/cache
   - .gradle
-  - /home/travis/build/MuhammadFarag/todo/build/
 
 jobs:
   include:
@@ -31,4 +30,7 @@ jobs:
     - pwd
     - echo $HOME
     - ls -la
+    - ls /home/travis/build/MuhammadFarag/todo/build/
+    - ls /home/travis/build/MuhammadFarag/todo/build/lib/
+    - ./gradlew assemble
     - sonar-scanner
