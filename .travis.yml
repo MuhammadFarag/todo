@@ -31,6 +31,6 @@ jobs:
     - echo $HOME
     - ls -la
     - ls /home/travis/build/MuhammadFarag/todo/build/
-    - ls /home/travis/build/MuhammadFarag/todo/build/lib/
+    - ls /home/travis/build/MuhammadFarag/todo/build/libs/
     - ./gradlew assemble
     - sonar-scanner
