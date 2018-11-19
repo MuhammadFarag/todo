@@ -21,4 +21,8 @@ public class TaskList {
     public void addTask (String task) {
         list.add(task) ;
     }
+
+    public void hello_wrong_name(String task) {
+
+    }
 }
