@@ -12,7 +12,7 @@ plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
     id "jacoco"
-    id "org.sonarqube" version "2.6"
+    id "org.sonarqube" version "2.6.2"
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_10
@@ -35,10 +35,5 @@ jacocoTestReport {
         html.enabled false
         csv.enabled false
     }
-}
-
-buildScan {
-    termsOfServiceUrl = 'https://gradle.com/terms-of-service'
-    termsOfServiceAgree = 'yes'
 }
 
