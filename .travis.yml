@@ -15,9 +15,10 @@ cache:
   directories:
   - $HOME/.gradle/caches/
   - $HOME/.gradle/wrapper/
-  - '$HOME/.m2/repository'
-  - '$HOME/.sonar/cache'
-  - '.gradle'
+  - $HOME/.m2/repository
+  - $HOME/.sonar/cache
+  - .gradle
+  - /home/travis/build/MuhammadFarag/todo/build/
 
 jobs:
   include:
@@ -28,5 +29,6 @@ jobs:
   - stage: sonar
     script:
     - pwd
+    - echo $HOME
     - ls -la
     - sonar-scanner
