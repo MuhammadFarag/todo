@@ -3,6 +3,11 @@ language: java
 jdk:
 - openjdk10
 
+
+addons:
+  sonarcloud:
+    organization: "mfarag"
+
 before_cache:
 - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
 - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
@@ -10,6 +15,9 @@ cache:
   directories:
   - $HOME/.gradle/caches/
   - $HOME/.gradle/wrapper/
+  - '$HOME/.m2/repository'
+  - '$HOME/.sonar/cache'
+  - '.gradle'
 
 jobs:
   include:
@@ -17,3 +25,5 @@ jobs:
     script: ./gradlew assemble
   - stage: test
     script: ./gradlew check
+  - stage: sonar
+    script: sonar-scanner
