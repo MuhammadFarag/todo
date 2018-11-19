@@ -7,8 +7,6 @@
  */
 
 
-sourceCompatibility = JavaVersion.VERSION_1_10
-targetCompatibility = JavaVersion.VERSION_1_10
 
 plugins {
     // Apply the java-library plugin to add support for Java Library
@@ -16,6 +14,10 @@ plugins {
     id "jacoco"
     id "org.sonarqube" version "2.6"
 }
+
+sourceCompatibility = JavaVersion.VERSION_1_10
+targetCompatibility = JavaVersion.VERSION_1_10
+
 
 dependencies {
     testImplementation 'junit:junit:4.12'
