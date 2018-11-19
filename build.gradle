@@ -6,6 +6,10 @@
  * user guide available at https://docs.gradle.org/4.10.2/userguide/java_library_plugin.html
  */
 
+
+sourceCompatibility = JavaVersion.VERSION_1_10
+targetCompatibility = JavaVersion.VERSION_1_10
+
 plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
