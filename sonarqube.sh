@@ -11,7 +11,7 @@
   -Dsonar.pullrequest.github.repository=muhammadfarag/todo
 
 ./gradlew build check sonarqube --scan\
-  -Dsonar.host.url=$SONAR_HOST_URL \
+  -Dsonar.host.url=https://sonarcloud.io \
   -Dsonar.login=$SONAR_TOKEN \
   -Dsonar.analysis.buildNumber=$TRAVIS_BUILD_NUMBER \
   -Dsonar.analysis.pipeline=$TRAVIS_BUILD_NUMBER \
