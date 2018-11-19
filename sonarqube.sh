@@ -10,7 +10,7 @@
   -Dsonar.pullrequest.provider=GitHub \
   -Dsonar.pullrequest.github.repository=muhammadfarag/todo
 
-./gradlew build check sonarqube \
+./gradlew build check sonarqube --scan\
   -Dsonar.host.url=$SONAR_HOST_URL \
   -Dsonar.login=$SONAR_TOKEN \
   -Dsonar.analysis.buildNumber=$TRAVIS_BUILD_NUMBER \
