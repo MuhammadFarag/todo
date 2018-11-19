@@ -17,6 +17,6 @@
   -Dsonar.analysis.pipeline=$TRAVIS_BUILD_NUMBER \
   -Dsonar.analysis.sha1=$TRAVIS_PULL_REQUEST_SHA  \
   -Dsonar.analysis.repository=$TRAVIS_REPO_SLUG \
-  -Dsonar.analysis.prNumber=$TRAVIS_PULL_REQUEST \
-  -Dsonar.branch.name=$TRAVIS_PULL_REQUEST_BRANCH
+  -Dsonar.analysis.prNumber=$TRAVIS_PULL_REQUEST
+#  -Dsonar.branch.name=$TRAVIS_PULL_REQUEST_BRANCH
 #  -Dsonar.branch.target=$TRAVIS_BRANCH
