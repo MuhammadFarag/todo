@@ -2,6 +2,8 @@ package com.mfarag.todo;
 
 import org.junit.Test;
 
+import java.util.Date;
+
 import static org.junit.Assert.*;
 
 public class TasksTest {
@@ -40,10 +42,24 @@ public class TasksTest {
 
         Task current = tasks.getCurrent() ;
         current.complete();
-        assertFalse(TEST_TASK_2.isCompleted());
-        assertTrue(current.isCompleted());
+        //assertFalse(TEST_TASK_2.isCompleted());
+        assertEquals(new Date(),current.isCompleted());
 
     }
+
+    @Test
+    public void TestCompletedContainDate () {
+        Tasks tasks = new Tasks() ;
+        tasks.addTask(TEST_TASK_1);
+        tasks.addTask(TEST_TASK_2);
+
+        Task current = tasks.getCurrent() ;
+        current.complete();
+
+        assertEquals(new Date(),current.isCompleted());
+
+    }
+
 
 
 

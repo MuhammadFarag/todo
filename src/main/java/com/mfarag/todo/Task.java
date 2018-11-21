@@ -1,19 +1,21 @@
 package com.mfarag.todo;
 
+import java.util.Date;
+
 public class Task {
     private String name ;
-    private Boolean completed ;
+    private Date completed ;
 
     public Task (String name) {
         this.name= name ;
-        this.completed = false ;
+        this.completed = null ;
     }
 
 
     public void complete () {
-        this.completed = true ;
+        this.completed = new Date() ;
     }
-    public boolean isCompleted() {
+    public Date isCompleted() {
         return this.completed ;
     }
 
