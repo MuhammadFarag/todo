@@ -1,31 +1,12 @@
 package com.mfarag.todo;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class TaskList {
 
-    List<String> list = new ArrayList<>();
+    private List<Task> tasks = new LinkedList<>();
 
+    public void main (String args) {
 
-    public String getTask(int id) {
-            if (id >= list.size()) {
-                return null;
-            } else {
-                return list.get(id);
-
-            }
-    }
-
-    public String getFirstTask () {
-        if (list.size() > 0) {
-            return list.get(0);
-        } else {
-            return null;
-        }
-    }
-
-    public void addTask (String task) {
-        list.add(task) ;
     }
 }
