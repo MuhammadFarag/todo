@@ -19,4 +19,13 @@ public class Task {
         return this.completed ;
     }
 
+    public Boolean isCompletedToday() {
+        if ( this.completed.equals( new Date())) {
+            return null ;
+        }
+        return true ;
+    }
+
+
+
 }

@@ -60,6 +60,18 @@ public class TasksTest {
 
     }
 
+    @Test
+    public void TestLastCompletedToday () {
+        Tasks tasks = new Tasks() ;
+        tasks.addTask(TEST_TASK_1);
+        tasks.addTask(TEST_TASK_2);
+
+        Task current = tasks.getCurrent() ;
+        current.complete();
+
+        assertNull(current.isCompletedToday());
+    }
+
 
 
 
