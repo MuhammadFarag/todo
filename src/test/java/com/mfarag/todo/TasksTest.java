@@ -40,6 +40,7 @@ public class TasksTest {
 
         Task current = tasks.getCurrent() ;
         current.complete();
+        assertFalse(TEST_TASK_2.isCompleted());
         assertTrue(current.isCompleted());
 
     }
