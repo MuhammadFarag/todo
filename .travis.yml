@@ -1,0 +1,39 @@
+language: java
+
+jdk:
+- openjdk10
+
+
+addons:
+  sonarcloud:
+    organization: "muhammadfarag-github"
+
+before_cache:
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+  - $HOME/.gradle/caches/
+  - $HOME/.gradle/wrapper/
+  - $HOME/.m2/repository
+  - $HOME/.sonar/cache
+  - .gradle
+
+jobs:
+  include:
+  - stage: build
+    script: ./gradlew assemble
+  - stage: test
+    script:
+    - ./gradlew check
+    - ./gradlew jacocoTestReport
+    - bash <(curl -s https://codecov.io/bash)
+  - stage: sonar
+    script:
+    - pwd
+    - echo $HOME
+    - ls -la
+    - ls /home/travis/build/MuhammadFarag/todo/build/
+    - ls /home/travis/build/MuhammadFarag/todo/build/libs/
+    - ./gradlew assemble
+    - sonar-scanner

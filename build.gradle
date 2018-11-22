@@ -10,16 +10,19 @@ plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
     id "jacoco"
+    id "org.sonarqube" version "2.6.2"
 }
 
 dependencies {
     testImplementation 'junit:junit:4.12'
-
 }
 
 repositories {
     jcenter()
 }
+
+sourceCompatibility = JavaVersion.VERSION_1_10
+targetCompatibility = JavaVersion.VERSION_1_10
 
 jacocoTestReport {
     reports {
