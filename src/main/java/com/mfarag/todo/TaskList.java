@@ -8,7 +8,8 @@ public class TaskList {
     List<String> list = new ArrayList<>();
 
 
-    public String getTask(int id) {
+    public String getTask() {
+        int id = 0 ;
         if (id >= list.size()) {
             return null;
         }else {
