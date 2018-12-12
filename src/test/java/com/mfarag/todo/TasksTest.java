@@ -72,6 +72,27 @@ public class TasksTest {
         assertNull(current.isCompletedToday());
     }
 
+    @Test
+    public void TestCountingDaysSinceComplete() {
+        Tasks tasks = new Tasks();
+        tasks.addTask(TEST_TASK_1);
+        Task current = tasks.getCurrent();
+        current.complete();
+
+
+    }
+
+    @Test
+    public void TestRuturnNullIfLastIsToday() {
+        Tasks tasks = new Tasks();
+        tasks.addTask(TEST_TASK_1);
+        tasks.addTask(TEST_TASK_2);
+
+        Task current = tasks.getCurrent();
+        current.complete();
+        assertNull(current.isCompletedToday());
+    }
+
 
 
 
