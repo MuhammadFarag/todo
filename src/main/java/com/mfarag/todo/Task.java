@@ -26,13 +26,5 @@ public class Task {
         return true ;
     }
 
-    public Date returnDaysSinceCompleted() {
-        /// (24 * 60 * 60 * 1000)
-        Date today = new Date();
-        return (this.completed);
-    }
-
-
-
 
 }
